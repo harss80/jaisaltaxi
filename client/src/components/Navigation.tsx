@@ -3,7 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import logoImage from "@assets/generated_images/logo.png";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +40,7 @@ export function Navigation() {
           <Link href="/" data-testid="link-home-logo">
             <span className="flex items-center hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-transform cursor-pointer">
               <img
-                src={logoImage}
+                src="/favicon.png"
                 alt="Logo"
                 className="h-40hi
                  md:h-40 w-auto"
