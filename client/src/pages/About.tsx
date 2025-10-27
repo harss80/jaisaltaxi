@@ -15,9 +15,9 @@ import {
 } from "lucide-react";
 import { SiTripadvisor } from "react-icons/si";
 
-import happyGuestsImage from "@assets/generated_images/Happy_tourists_group_photo_79b5500b.png";
-import taxiFleetImage from "@assets/generated_images/Professional_taxi_fleet_61686583.png";
-import fortImage from "@assets/generated_images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
+const happyGuestsImage = "/favicon.png";
+const taxiFleetImage = "/favicon.png";
+const fortImage = "/favicon.png";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
-import camelSafariImage from "@assets/generated_images/Camel_safari_desert_sunset_eea3e3dd.png";
+const camelSafariImage = "/favicon.png";
 
 export default function Accommodation() {
   const gallery = [

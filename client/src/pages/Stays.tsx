@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import hotelImage from "@assets/generated_images/Luxury_hotel_room_interior_c2e3cd9a.png";
-import desertCampImage from "@assets/generated_images/Luxury_desert_camp_tents_935fb6c0.png";
-import happyGuestsImage from "@assets/generated_images/Happy_tourists_group_photo_79b5500b.png";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+
+const hotelImage = "/favicon.png";
+const desertCampImage = "/favicon.png";
+const happyGuestsImage = "/favicon.png";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);

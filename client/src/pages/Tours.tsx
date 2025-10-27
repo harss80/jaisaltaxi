@@ -14,9 +14,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-import fortImage from "@assets/generated_images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
-import desertCampImage from "@assets/generated_images/Luxury_desert_camp_tents_935fb6c0.png";
-import culturalImage from "@assets/generated_images/Cultural_performance_desert_f7e85f4d.png";
+const fortImage = "/favicon.png";
+const desertCampImage = "/favicon.png";
+const culturalImage = "/favicon.png";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
