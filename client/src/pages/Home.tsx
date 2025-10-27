@@ -18,23 +18,23 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const heroImage = "/favicon.png";
-const camelSafariImage = "/favicon.png";
-const jeepSafariImage = "/favicon.png";
-const parasailingImage = "/favicon.png";
-const motorbikingImage = "/favicon.png";
-const fortImage = "/favicon.png";
-const desertCampImage = "/favicon.png";
-const culturalImage = "/favicon.png";
-const halfDayImage = "/favicon.png";
-const fullDayImage = "/favicon.png";
-const samDunesImage = "/favicon.png";
-const tanotImage = "/favicon.png";
-const testimonial1 = "/favicon.png";
-const testimonial2 = "/favicon.png";
-const testimonial3 = "/favicon.png";
-const happyGuestsImage = "/favicon.png";
-const taxiFleetImage = "/favicon.png";
+const heroImage = "/images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
+const camelSafariImage = "/images/Camel_safari_desert_sunset_eea3e3dd.png";
+const jeepSafariImage = "/images/Jeep_safari_adventure_7c012cda.png";
+const parasailingImage = "/images/Parasailing_over_desert_b628a8fa.png";
+const motorbikingImage = "/images/Desert_motorbiking_adventure_77e0e006.png";
+const fortImage = "/images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
+const desertCampImage = "/images/Luxury_desert_camp_tents_935fb6c0.png";
+const culturalImage = "/images/Cultural_performance_desert_f7e85f4d.png";
+const halfDayImage = "/images/Half-day_tour_landmarks_7df167d1.png";
+const fullDayImage = "/images/Full-day_Jaisalmer_cityscape_00861e0b.png";
+const samDunesImage = "/images/Sam_Sand_Dunes_sunset_ede2408b.png";
+const tanotImage = "/images/Tanot_border_memorial_e12db5d7.png";
+const testimonial1 = "/images/Female_tourist_testimonial_portrait_30deb778.png";
+const testimonial2 = "/images/Male_tourist_testimonial_portrait_99783479.png";
+const testimonial3 = "/images/Couple_tourist_testimonial_portrait_62d2d045.png";
+const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
+const taxiFleetImage = "/images/Professional_taxi_fleet_61686583.png";
 
 const services = [
   {

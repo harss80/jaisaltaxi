@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 
-const camelSafariImage = "/favicon.png";
-const hotelImage = "/favicon.png";
-const desertCampImage = "/favicon.png";
-const happyGuestsImage = "/favicon.png";
+const camelSafariImage = "/images/Camel_safari_desert_sunset_eea3e3dd.png";
+const hotelImage = "/images/Luxury_hotel_room_interior_c2e3cd9a.png";
+const desertCampImage = "/images/Luxury_desert_camp_tents_935fb6c0.png";
+const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
  
 
 export default function Activities() {
