@@ -1,0 +1,412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  --background: 40 4% 97%;
+
+  --foreground: 40 8% 15%;
+
+  --border: 40 6% 88%;
+
+  --card: 40 5% 95%;
+
+  --card-foreground: 40 8% 15%;
+
+  --card-border: 40 6% 90%;
+
+  --sidebar: 40 5% 93%;
+
+  --sidebar-foreground: 40 8% 15%;
+
+  --sidebar-border: 40 6% 86%;
+
+  --sidebar-primary: 28 85% 48%;
+
+  --sidebar-primary-foreground: 28 10% 98%;
+
+  --sidebar-accent: 40 8% 88%;
+
+  --sidebar-accent-foreground: 40 8% 20%;
+
+  --sidebar-ring: 28 85% 48%;
+
+  --popover: 40 6% 91%;
+
+  --popover-foreground: 40 8% 15%;
+
+  --popover-border: 40 7% 86%;
+
+  --primary: 28 85% 48%;
+
+  --primary-foreground: 28 10% 98%;
+
+  --secondary: 40 8% 86%;
+
+  --secondary-foreground: 40 8% 18%;
+
+  --muted: 40 8% 89%;
+
+  --muted-foreground: 40 6% 35%;
+
+  --accent: 40 12% 87%;
+
+  --accent-foreground: 40 8% 20%;
+
+  --destructive: 0 72% 45%;
+
+  --destructive-foreground: 0 10% 98%;
+
+  --input: 40 12% 75%;
+  --ring: 28 85% 48%;
+  --chart-1: 28 85% 48%;
+  --chart-2: 20 75% 52%;
+  --chart-3: 15 70% 58%;
+  --chart-4: 35 65% 45%;
+  --chart-5: 10 80% 42%;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: .5rem;
+  --shadow-2xs: 0px 1px 2px 0px hsl(40 20% 10% / 0.05);
+  --shadow-xs: 0px 1px 3px 0px hsl(40 20% 10% / 0.08);
+  --shadow-sm: 0px 2px 4px -1px hsl(40 20% 10% / 0.06), 0px 1px 2px -1px hsl(40 20% 10% / 0.08);
+  --shadow: 0px 4px 6px -1px hsl(40 20% 10% / 0.08), 0px 2px 4px -2px hsl(40 20% 10% / 0.08);
+  --shadow-md: 0px 6px 12px -2px hsl(40 20% 10% / 0.10), 0px 3px 6px -3px hsl(40 20% 10% / 0.10);
+  --shadow-lg: 0px 10px 20px -4px hsl(40 20% 10% / 0.12), 0px 4px 8px -4px hsl(40 20% 10% / 0.08);
+  --shadow-xl: 0px 20px 30px -6px hsl(40 20% 10% / 0.14), 0px 8px 16px -6px hsl(40 20% 10% / 0.10);
+  --shadow-2xl: 0px 30px 50px -12px hsl(40 20% 10% / 0.18);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+
+  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  --background: 40 4% 8%;
+
+  --foreground: 40 6% 92%;
+
+  --border: 40 5% 18%;
+
+  --card: 40 4% 11%;
+
+  --card-foreground: 40 6% 92%;
+
+  --card-border: 40 5% 16%;
+
+  --sidebar: 40 4% 13%;
+
+  --sidebar-foreground: 40 6% 92%;
+
+  --sidebar-border: 40 5% 20%;
+
+  --sidebar-primary: 28 85% 48%;
+
+  --sidebar-primary-foreground: 28 10% 98%;
+
+  --sidebar-accent: 40 6% 18%;
+
+  --sidebar-accent-foreground: 40 8% 88%;
+
+  --sidebar-ring: 28 85% 48%;
+
+  --popover: 40 5% 15%;
+
+  --popover-foreground: 40 6% 92%;
+
+  --popover-border: 40 5% 21%;
+
+  --primary: 28 85% 48%;
+
+  --primary-foreground: 28 10% 98%;
+
+  --secondary: 40 6% 20%;
+
+  --secondary-foreground: 40 8% 90%;
+
+  --muted: 40 6% 17%;
+
+  --muted-foreground: 40 6% 70%;
+
+  --accent: 40 8% 19%;
+
+  --accent-foreground: 40 8% 88%;
+
+  --destructive: 0 72% 45%;
+
+  --destructive-foreground: 0 10% 98%;
+
+  --input: 40 10% 32%;
+  --ring: 28 85% 48%;
+  --chart-1: 28 85% 65%;
+  --chart-2: 20 75% 68%;
+  --chart-3: 15 70% 72%;
+  --chart-4: 35 65% 62%;
+  --chart-5: 10 80% 60%;
+
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.40);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.45);
+  --shadow-sm: 0px 2px 4px -1px hsl(0 0% 0% / 0.40), 0px 1px 2px -1px hsl(0 0% 0% / 0.45);
+  --shadow: 0px 4px 6px -1px hsl(0 0% 0% / 0.45), 0px 2px 4px -2px hsl(0 0% 0% / 0.45);
+  --shadow-md: 0px 6px 12px -2px hsl(0 0% 0% / 0.50), 0px 3px 6px -3px hsl(0 0% 0% / 0.50);
+  --shadow-lg: 0px 10px 20px -4px hsl(0 0% 0% / 0.55), 0px 4px 8px -4px hsl(0 0% 0% / 0.45);
+  --shadow-xl: 0px 20px 30px -6px hsl(0 0% 0% / 0.60), 0px 8px 16px -6px hsl(0 0% 0% / 0.50);
+  --shadow-2xl: 0px 30px 50px -12px hsl(0 0% 0% / 0.70);
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+
+  /* Travel printed background for sections (subtle pattern + warm radial glows) */
+  .bg-travel-print {
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.06)' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12 L22 2 L12 22 L10 14 Z'/><circle cx='6' cy='6' r='1.5' fill='rgba(0,0,0,0.06)' stroke='none'/><path d='M16 7h4M18 5v4' /></svg>"),
+      radial-gradient(1200px 500px at 90% 0%, rgba(234,179,8,0.10), transparent 60%),
+      radial-gradient(1000px 400px at 0% 100%, rgba(249,115,22,0.08), transparent 60%);
+    background-size: 24px 24px, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-position: 0 0, center, center;
+  }
+
+  .dark .bg-travel-print {
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12 L22 2 L12 22 L10 14 Z'/><circle cx='6' cy='6' r='1.5' fill='rgba(255,255,255,0.06)' stroke='none'/><path d='M16 7h4M18 5v4' /></svg>"),
+      radial-gradient(1200px 500px at 90% 0%, rgba(234,179,8,0.12), transparent 60%),
+      radial-gradient(1000px 400px at 0% 100%, rgba(249,115,22,0.10), transparent 60%);
+  }
+
+  /* Desert-themed camel pattern with soft warm glows */
+  .bg-desert-camels {
+    background-image:
+      url("https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f42a.svg"),
+      radial-gradient(900px 400px at 90% 0%, rgba(234,179,8,0.10), transparent 60%),
+      radial-gradient(800px 360px at 0% 100%, rgba(249,115,22,0.08), transparent 60%),
+      linear-gradient(0deg, rgba(59,130,246,0.18), rgba(59,130,246,0.18));
+    background-size: 28px 28px, auto, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-position: 0 0, center, center;
+  }
+
+  .dark .bg-desert-camels {
+    background-image:
+      url("https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f42a.svg"),
+      radial-gradient(900px 400px at 90% 0%, rgba(234,179,8,0.14), transparent 60%),
+      radial-gradient(800px 360px at 0% 100%, rgba(249,115,22,0.12), transparent 60%),
+      linear-gradient(0deg, rgba(59,130,246,0.24), rgba(59,130,246,0.24));
+  }
+
+  /* Large, subtle camel watermark for sections */
+  .camel-watermark {
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    width: 520px;
+    height: 520px;
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f42a.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -5;
+    -webkit-mask-image: radial-gradient(60% 60% at 40% 40%, #000 0%, transparent 100%);
+            mask-image: radial-gradient(60% 60% at 40% 40%, #000 0%, transparent 100%);
+  }
+
+  .dark .camel-watermark { opacity: 0.12; }
+
+  /* Bottom fade to the section background to create a soft dune-like transition */
+  .section-dune-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), hsl(var(--card)) 90%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Sightseeing background: subtle route/map pattern with glows */
+  .bg-sightseeing {
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220' viewBox='0 0 320 220'><g fill='none' stroke='rgba(14,165,233,0.12)' stroke-width='2' stroke-linecap='round'><path d='M10 170 C 60 130, 120 190, 170 150 S 250 100, 310 120'/></g><g fill='rgba(14,165,233,0.18)'><circle cx='60' cy='150' r='2'/><circle cx='120' cy='180' r='2'/><circle cx='210' cy='130' r='2'/></g></svg>"),
+      radial-gradient(900px 400px at 100% 0%, rgba(59,130,246,0.14), transparent 60%),
+      radial-gradient(800px 360px at 0% 100%, rgba(234,179,8,0.12), transparent 60%),
+      linear-gradient(0deg, rgba(59,130,246,0.06), rgba(59,130,246,0.06));
+    background-size: 320px 220px, auto, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 0 0, center, center, center;
+  }
+
+  .dark .bg-sightseeing {
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220' viewBox='0 0 320 220'><g fill='none' stroke='rgba(14,165,233,0.18)' stroke-width='2' stroke-linecap='round'><path d='M10 170 C 60 130, 120 190, 170 150 S 250 100, 310 120'/></g><g fill='rgba(14,165,233,0.26)'><circle cx='60' cy='150' r='2'/><circle cx='120' cy='180' r='2'/><circle cx='210' cy='130' r='2'/></g></svg>"),
+      radial-gradient(900px 400px at 100% 0%, rgba(59,130,246,0.18), transparent 60%),
+      radial-gradient(800px 360px at 0% 100%, rgba(234,179,8,0.16), transparent 60%),
+      linear-gradient(0deg, rgba(59,130,246,0.10), rgba(59,130,246,0.10));
+  }
+}
