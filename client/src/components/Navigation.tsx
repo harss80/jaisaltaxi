@@ -40,7 +40,7 @@ export function Navigation() {
           <Link href="/" data-testid="link-home-logo">
             <span className="flex items-center hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-transform cursor-pointer">
               <img
-                src="/favicon.png"
+                src="/images/logo.png"
                 alt="Logo"
                 className="h-40hi
                  md:h-40 w-auto"
