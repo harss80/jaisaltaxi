@@ -14,15 +14,15 @@ import {
   Car,
 } from "lucide-react";
 
-const halfDayImage = "/images/Half-day_tour_landmarks_7df167d1.png";
-const fullDayImage = "/images/Full-day_Jaisalmer_cityscape_00861e0b.png";
-const samDunesImage = "/images/Sam_Sand_Dunes_sunset_ede2408b.png";
-const tanotImage = "/images/Tanot_border_memorial_e12db5d7.png";
-const taxiImage = "/images/Professional_taxi_fleet_61686583.png";
-const testimonial1 = "/images/Female_tourist_testimonial_portrait_30deb778.png";
-const testimonial2 = "/images/Male_tourist_testimonial_portrait_99783479.png";
-const testimonial3 = "/images/Couple_tourist_testimonial_portrait_62d2d045.png";
-const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
+const halfDayImage = "/assets/car1.jpg";
+const fullDayImage = "/assets/car2.jpg";
+const samDunesImage = "/assets/car3.jpg";
+const tanotImage = "/assets/car4.jpg";
+const taxiImage = "/assets/car5.jpg";
+const testimonial1 = "/assets/car1.jpg";
+const testimonial2 = "/assets/car2.jpg";
+const testimonial3 = "/assets/car3.jpg";
+const happyGuestsImage = "/assets/car4.jpg";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);

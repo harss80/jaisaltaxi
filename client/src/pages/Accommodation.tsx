@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
-const camelSafariImage = "/favicon.png";
+const camelSafariImage = "/assets/camel1.jpg";
 
 export default function Accommodation() {
   const gallery = [
-    { src: "/camel-safari.jpg", fallback: camelSafariImage, alt: "Camel Safari", href: "#camel-safari" },
-    { src: "/jeep-safari.jpg", fallback: camelSafariImage, alt: "Jeep Safari", href: "#jeep-safari" },
-    { src: "/motorbiking.jpg", fallback: camelSafariImage, alt: "Motorbiking", href: "#motorbiking" },
-    { src: "/quad-biking.jpg", fallback: camelSafariImage, alt: "Quad Biking", href: "#quad-biking" },
-    { src: "/parasailing.jpg", fallback: camelSafariImage, alt: "Parasailing", href: "#parasailing" },
+    { src: "/assets/camel2.jpg", fallback: camelSafariImage, alt: "Camel Safari", href: "#camel-safari" },
+    { src: "/assets/car4.jpg", fallback: camelSafariImage, alt: "Jeep Safari", href: "#jeep-safari" },
+    { src: "/assets/car5.jpg", fallback: camelSafariImage, alt: "Motorbiking", href: "#motorbiking" },
+    { src: "/assets/camp5.jpg", fallback: camelSafariImage, alt: "Quad Biking", href: "#quad-biking" },
+    { src: "/assets/camp6.jpg", fallback: camelSafariImage, alt: "Parasailing", href: "#parasailing" },
   ];
   const features = [
     { title: "Diverse Adventures", desc: "Indulge in thrilling camel rides, jeep safaris, motorbiking, parasailing and more." },
@@ -19,7 +19,7 @@ export default function Accommodation() {
   const activities = [
     {
       title: "Camel Safari",
-      imgSrc: "/camel-safari.jpg",
+      imgSrc: "/assets/camel2.jpg",
       desc: "Ride across the golden dunes on a traditional camel safari, perfect for sunset views and serene desert vibes.",
       rows: [
         { type: "Short ride (30 min)", price: "On Request" },
@@ -30,7 +30,7 @@ export default function Accommodation() {
     },
     {
       title: "Jeep Safari",
-      imgSrc: "/jeep-safari.jpg",
+      imgSrc: "/assets/car4.jpg",
       desc: "High-adrenaline dune bashing on 4x4 jeeps through the desert terrain for thrill seekers.",
       rows: [
         { type: "Short – 4 people / jeep (15 min)", price: "Rs. 1999" },
@@ -42,7 +42,7 @@ export default function Accommodation() {
     },
     {
       title: "Motorbiking",
-      imgSrc: "/motorbiking.jpg",
+      imgSrc: "/assets/car5.jpg",
       desc: "Explore off-road tracks around Jaisalmer on powerful bikes with trained riders.",
       rows: [
         { type: "Short trail (30 min) – per bike", price: "On Request" },
@@ -52,7 +52,7 @@ export default function Accommodation() {
     },
     {
       title: "Quad Biking",
-      imgSrc: "/quad-biking.jpg",
+      imgSrc: "/assets/camp5.jpg",
       desc: "Ride ATVs over rolling dunes with expert supervision and exciting tracks.",
       rows: [
         { type: "ATV 200cc (20 min) – per rider", price: "On Request" },
@@ -62,7 +62,7 @@ export default function Accommodation() {
     },
     {
       title: "Parasailing",
-      imgSrc: "/parasailing.jpg",
+      imgSrc: "/assets/camp6.jpg",
       desc: "Soar above the dunes and capture breathtaking aerial views of the Thar Desert.",
       rows: [
         { type: "Single ride (5–7 min)", price: "On Request" },

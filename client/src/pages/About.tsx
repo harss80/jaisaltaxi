@@ -15,9 +15,9 @@ import {
 } from "lucide-react";
 import { SiTripadvisor } from "react-icons/si";
 
-const happyGuestsImage = "/favicon.png";
-const taxiFleetImage = "/favicon.png";
-const fortImage = "/favicon.png";
+const happyGuestsImage = "/assets/hotel8.jpg";
+const taxiFleetImage = "/assets/car3.jpg";
+const fortImage = "/assets/castel.jpg";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
@@ -91,7 +91,7 @@ export default function About() {
             <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md">
               <div className="relative aspect-[16/6] sm:aspect-[16/5] md:aspect-[16/4]">
                 <img
-                  src="/about-hero.jpg"
+                  src="/assets/hotel3.jpg"
                   alt="About Us"
                   className="w-full h-full object-cover"
                   loading="lazy"

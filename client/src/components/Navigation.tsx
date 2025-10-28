@@ -1,13 +1,31 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, Home as HomeIcon, Car, Building2, Zap, Info, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const getIcon = (label: string) => {
+    switch (label) {
+      case "Home":
+        return <HomeIcon className="w-5 h-5" />;
+      case "Taxi":
+        return <Car className="w-5 h-5" />;
+      case "Stays":
+        return <Building2 className="w-5 h-5" />;
+      case "Activities":
+        return <Zap className="w-5 h-5" />;
+      case "About":
+        return <Info className="w-5 h-5" />;
+      case "Contact":
+        return <Phone className="w-5 h-5" />;
+      default:
+        return <HomeIcon className="w-5 h-5" />;
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +33,48 @@ export function Navigation() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    const onResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    const onPopState = () => setIsMobileMenuOpen(false);
+    window.addEventListener("resize", onResize);
+    window.addEventListener("popstate", onPopState);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("popstate", onPopState);
+    };
   }, []);
 
   const navLinks = [
@@ -42,8 +102,7 @@ export function Navigation() {
               <img
                 src="/images/logo.png"
                 alt="Logo"
-                className="h-40hi
-                 md:h-40 w-auto"
+                className="h-16 md:h-20 w-auto"
                 onError={(e) => {
                   const t = e.currentTarget as HTMLImageElement;
                   t.src = "/favicon.png";
@@ -97,21 +156,20 @@ export function Navigation() {
               </a>
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
           <Button
-            variant="ghost"
+            variant="outline"
             size="icon"
-            className="lg:hidden rounded-full"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden rounded-full h-11 w-11 border-border bg-card/80 backdrop-blur"
+            onClick={() => setIsMobileMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
             data-testid="button-mobile-menu-toggle"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </Button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -120,7 +178,8 @@ export function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm lg:hidden z-40"
+              className="fixed inset-0 bg-black/60 lg:hidden z-[9999]"
+              aria-hidden="true"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
@@ -128,60 +187,53 @@ export function Navigation() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-y-0 right-0 w-full max-w-sm bg-background/95 backdrop-blur-xl border-l border-border shadow-xl lg:hidden z-50 rounded-l-2xl"
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              className="fixed inset-0 w-screen h-[100dvh] min-h-[100dvh] bg-white dark:bg-slate-950 lg:hidden z-[10000] overscroll-contain"
             >
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-4 border-b">
-                  <span className="text-xl font-serif font-bold text-primary">Menu</span>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    data-testid="button-mobile-menu-close"
-                  >
+              <div className="flex flex-col h-full pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+                <div className="flex items-center justify-between p-5 md:p-6 border-b">
+                  <div className="flex items-center gap-3">
+                    <img src="/images/logo.png" alt="Logo" className="h-12 w-12 rounded" onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/favicon.png"; }} />
+                    <span className="text-xl md:text-2xl font-semibold">Menu</span>
+                  </div>
+                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="w-6 h-6" />
                   </Button>
                 </div>
-                <div className="flex-1 overflow-y-auto p-4">
-                  <div className="space-y-2">
+                <div className="flex-1 overflow-y-auto p-6 md:p-8">
+                  <div className="grid grid-cols-2 gap-4 md:gap-5">
                     {navLinks.map((link) => (
                       <Link key={link.href} href={link.href}>
                         <span
                           onClick={() => setIsMobileMenuOpen(false)}
-                          data-testid={`link-mobile-${link.label.toLowerCase().replace(" ", "-")}`}
-                          className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors hover-elevate cursor-pointer ${
-                            location === link.href
-                              ? "bg-primary text-primary-foreground"
-                              : "text-foreground hover:bg-accent"
+                          className={`group block rounded-2xl border shadow-sm hover:shadow-md transition-all cursor-pointer p-4 md:p-5 ${
+                            location === link.href ? "bg-primary text-primary-foreground border-primary/60" : "bg-card text-foreground border-border hover:bg-accent"
                           }`}
                         >
-                          {link.label}
+                          <span className={`flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl border mx-auto ${location === link.href ? 'border-white/40 bg-white/20' : 'border-border bg-muted/40'}`}>
+                            {getIcon(link.label)}
+                          </span>
+                          <span className="mt-3 md:mt-4 block text-center text-base md:text-lg font-semibold">
+                            {link.label}
+                          </span>
                         </span>
                       </Link>
                     ))}
                   </div>
-                  <div className="mt-6 space-y-3">
-                    <Button
-                      variant="outline"
-                      size="default"
-                      className="w-full rounded-full"
-                      asChild
-                      data-testid="button-call-mobile"
-                    >
-                      <a href="tel:+919928600165">
-                        <Phone className="w-4 h-4 mr-2" />
-                        Call Now
+                </div>
+                <div className="sticky bottom-0 left-0 right-0 border-t bg-white/95 dark:bg-slate-950/95 backdrop-blur px-6 py-4 md:px-8">
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button variant="outline" size="default" className="w-full rounded-xl py-5 text-base" asChild>
+                      <a href="tel:+919928600165" className="flex items-center justify-center gap-2">
+                        <Phone className="w-5 h-5" />
+                        Call
                       </a>
                     </Button>
-                    <Button
-                      variant="default"
-                      size="default"
-                      className="w-full rounded-full"
-                      asChild
-                      data-testid="button-whatsapp-mobile"
-                    >
-                      <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                    <Button variant="default" size="default" className="w-full rounded-xl py-5 text-base" asChild>
+                      <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                        <MessageCircle className="w-5 h-5" />
                         WhatsApp
                       </a>
                     </Button>

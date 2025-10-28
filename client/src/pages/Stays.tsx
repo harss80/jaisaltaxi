@@ -4,9 +4,15 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 
-const hotelImage = "/images/Luxury_hotel_room_interior_c2e3cd9a.png";
-const desertCampImage = "/images/Luxury_desert_camp_tents_935fb6c0.png";
-const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
+const heroHotel = "/assets/hotel1.jpg";
+const galleryHotel1 = "/assets/hotel5.jpg";
+const galleryHotel2 = "/assets/hotel7.jpg";
+const galleryHotel3 = "/assets/hotel9.jpg";
+const galleryHotel4 = "/assets/hotel10.jpg";
+const sectionHotel1 = "/assets/hotel12.jpg";
+const pricingHotel = "/assets/hotel2.jpg";
+const jaipurHotel = "/assets/hotel6.jpg";
+const udaipurHotel = "/assets/hotel8.jpg";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
@@ -38,7 +44,7 @@ export default function Stays() {
             <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md">
               <div className="relative aspect-[16/6] sm:aspect-[16/5] md:aspect-[16/4]">
                 <img
-                  src={hotelImage}
+                  src={heroHotel}
                   alt="Stays in Jaisalmer"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -66,7 +72,7 @@ export default function Stays() {
           </p>
 
           <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
-            {[hotelImage, desertCampImage, happyGuestsImage, hotelImage].map((src, i) => (
+            {[galleryHotel1, galleryHotel2, galleryHotel3, galleryHotel4].map((src, i) => (
               <AnimatedCard key={i} delay={i * 0.05}>
                 <div className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-border bg-card">
                   <img src={src} alt="Stays gallery" className="w-full h-full object-cover aspect-square" loading="lazy" />
@@ -135,7 +141,7 @@ export default function Stays() {
             </div>
             <div className="order-first lg:order-last">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
-                <img src={desertCampImage} alt="Desert Camp" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+                <img src={sectionHotel1} alt="Comfortable stays" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
               </div>
             </div>
           </div>
@@ -149,7 +155,7 @@ export default function Stays() {
             {/* Left: Image */}
             <div>
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
-                <img src={hotelImage} alt="Hotel Stay" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+                <img src={pricingHotel} alt="Hotel Stay" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
               </div>
             </div>
             {/* Right: Copy + Table */}
@@ -239,7 +245,7 @@ export default function Stays() {
             {/* Right: Image */}
             <div className="order-first lg:order-last">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
-                <img src={hotelImage} alt="Hotels in Jaipur" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+                <img src={jaipurHotel} alt="Hotels in Jaipur" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
               </div>
             </div>
           </div>
@@ -253,7 +259,7 @@ export default function Stays() {
             {/* Left: Image */}
             <div>
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
-                <img src={hotelImage} alt="Hotels in Udaipur" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+                <img src={udaipurHotel} alt="Hotels in Udaipur" className="w-full h-full object-cover aspect-[3/4]" loading="lazy" />
               </div>
             </div>
             {/* Right: Copy + Table */}

@@ -14,9 +14,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-const fortImage = "/favicon.png";
-const desertCampImage = "/favicon.png";
-const culturalImage = "/favicon.png";
+const fortImage = "/assets/castel.jpg";
+const desertCampImage = "/assets/camp2.jpg";
+const culturalImage = "/assets/dance1.jpg";
 
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);

@@ -18,30 +18,30 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const heroImage = "/images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
-const camelSafariImage = "/images/Camel_safari_desert_sunset_eea3e3dd.png";
-const jeepSafariImage = "/images/Jeep_safari_adventure_7c012cda.png";
-const parasailingImage = "/images/Parasailing_over_desert_b628a8fa.png";
-const motorbikingImage = "/images/Desert_motorbiking_adventure_77e0e006.png";
-const fortImage = "/images/Jaisalmer_Fort_golden_hour_e9bc96ce.png";
-const desertCampImage = "/images/Luxury_desert_camp_tents_935fb6c0.png";
-const culturalImage = "/images/Cultural_performance_desert_f7e85f4d.png";
-const halfDayImage = "/images/Half-day_tour_landmarks_7df167d1.png";
-const fullDayImage = "/images/Full-day_Jaisalmer_cityscape_00861e0b.png";
-const samDunesImage = "/images/Sam_Sand_Dunes_sunset_ede2408b.png";
-const tanotImage = "/images/Tanot_border_memorial_e12db5d7.png";
-const testimonial1 = "/images/Female_tourist_testimonial_portrait_30deb778.png";
-const testimonial2 = "/images/Male_tourist_testimonial_portrait_99783479.png";
-const testimonial3 = "/images/Couple_tourist_testimonial_portrait_62d2d045.png";
-const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
-const taxiFleetImage = "/images/Professional_taxi_fleet_61686583.png";
+const heroImage = "/assets/dance1.jpg";
+const camelSafariImage = "/assets/camel1.jpg";
+const jeepSafariImage = "/assets/car1.jpg";
+const parasailingImage = "/assets/camp5.jpg";
+const motorbikingImage = "/assets/car2.jpg";
+const fortImage = "/assets/castel.jpg";
+const desertCampImage = "/assets/camp2.jpg";
+const culturalImage = "/assets/dance1.jpg";
+const halfDayImage = "/assets/lake.jpg";
+const fullDayImage = "/assets/hotel2.jpg";
+const samDunesImage = "/assets/camp3.jpg";
+const tanotImage = "/assets/camel3.jpg";
+const testimonial1 = "/assets/hotel11.jpg";
+const testimonial2 = "/assets/hotel12.jpg";
+const testimonial3 = "/assets/hotel13.jpg";
+const happyGuestsImage = "/assets/hotel8.jpg";
+const taxiFleetImage = "/assets/car3.jpg";
 
 const services = [
   {
     icon: MapPin,
     title: "Sightseeing",
     description: "Embark on a journey to discover the hidden gems of Jaisalmer.",
-    href: "/services",
+    href: "/tours",
     image: fortImage,
   },
   {

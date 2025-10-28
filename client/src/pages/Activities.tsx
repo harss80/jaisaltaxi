@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 
-const camelSafariImage = "/images/Camel_safari_desert_sunset_eea3e3dd.png";
-const hotelImage = "/images/Luxury_hotel_room_interior_c2e3cd9a.png";
-const desertCampImage = "/images/Luxury_desert_camp_tents_935fb6c0.png";
-const happyGuestsImage = "/images/Happy_tourists_group_photo_79b5500b.png";
+const camelSafariImage = "/assets/camel1.jpg";
+const hotelImage = "/assets/hotel1.jpg";
+const desertCampImage = "/assets/camp1.jpg";
+const happyGuestsImage = "/assets/hotel3.jpg";
  
 
 export default function Activities() {
@@ -21,7 +21,7 @@ export default function Activities() {
             <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md">
               <div className="relative aspect-[16/6] sm:aspect-[16/5] md:aspect-[16/4]">
                 <img
-                  src="/activities-hero.jpg"
+                  src="/assets/camel2.jpg"
                   alt="Sightseeing in Jaisalmer"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -48,7 +48,7 @@ export default function Activities() {
           </p>
 
           <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
-            {[camelSafariImage, happyGuestsImage, desertCampImage, hotelImage].map((src, i) => (
+            {["/assets/lake.jpg", "/assets/dance1.jpg", "/assets/camel1.jpg", "/assets/dance2.jpg"].map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-border bg-card">
                 <img src={src} alt="Sightseeing gallery" className="w-full h-full object-cover aspect-square" loading="lazy" />
               </div>
@@ -80,13 +80,13 @@ export default function Activities() {
             <div>
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/half-day.jpg"
+                  src="/assets/dance1.jpg"
                   alt="Half Day Trip around Jaisalmer"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
                   onError={(e) => {
                     const t = e.currentTarget as HTMLImageElement;
-                    t.src = happyGuestsImage;
+                    t.src = "/assets/dance2.jpg";
                   }}
                 />
               </div>
@@ -178,7 +178,7 @@ export default function Activities() {
             <div className="order-first lg:order-last">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/full-day.jpg"
+                  src="/assets/camp2.jpg"
                   alt="Full Day Trip around Jaisalmer"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
@@ -199,7 +199,7 @@ export default function Activities() {
             <div>
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/sand-dunes.jpg"
+                  src="/assets/camp3.jpg"
                   alt="Trip to Sam or Khuri Sand Dunes"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
@@ -296,7 +296,7 @@ export default function Activities() {
             <div className="order-first lg:order-last">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/border-tour.jpg"
+                  src="/assets/camel5.jpg"
                   alt="Border Tour to Tanot and Laungewala"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
@@ -354,7 +354,7 @@ export default function Activities() {
             <div className="order-first">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/bada-bagh.jpg"
+                  src="/assets/castel.jpg"
                   alt="Trip to Bada Bagh and Vyas Chhatri"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
@@ -414,7 +414,7 @@ export default function Activities() {
             <div className="order-first lg:order-last">
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/desert-park.jpg"
+                  src="/assets/camp6.jpg"
                   alt="Trip to the Desert National Park"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
@@ -435,7 +435,7 @@ export default function Activities() {
             <div>
               <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border bg-card">
                 <img
-                  src="/ramdevra.jpg"
+                  src="/assets/lake.jpg"
                   alt="Trip to Ramdevra Village"
                   className="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
