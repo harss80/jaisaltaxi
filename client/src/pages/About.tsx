@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/SectionHeader";
+import SEO from "@/components/SEO";
 import {
   Award,
   Shield,
@@ -80,6 +81,39 @@ const achievements = [
 export default function About() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="About Desert Tours Jaisalmer | Trusted Taxi, Safari & Sightseeing"
+        description="Learn about Desert Tours Jaisalmer – trusted local team for taxis, private cabs, desert safaris, Khuri/Sam camping, Tanot one-way cabs, airport/railway transfers, and family sightseeing."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={"/assets/hotel8.jpg"}
+        canonical="https://jaisaltaxi.com/about"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Desert Tours Jaisalmer",
+          description:
+            "Award-winning Jaisalmer travel partner offering taxi, private cab, desert safari, and local tours.",
+          url: typeof window !== 'undefined' ? window.location.href : undefined,
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+91 99286 00165",
+            contactType: "customer service",
+            areaServed: "IN",
+          },
+          sameAs: ["https://wa.me/919928600165"]
+        }}
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">

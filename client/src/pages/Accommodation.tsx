@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 const camelSafariImage = "/assets/camel1.jpg";
 
 export default function Accommodation() {
@@ -73,6 +74,35 @@ export default function Accommodation() {
   ];
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Accommodation & Desert Camping in Jaisalmer | Hotels & Camps"
+        description="Book comfortable hotels and luxury desert camps in Jaisalmer with transfers: railway station taxi, airport pickup, local city tour, and desert safari cab."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage="/assets/hotel8.jpg"
+        canonical="https://jaisaltaxi.com/accommodation"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          name: "Desert Tours Jaisalmer — Accommodation",
+          description: "Hotels and desert camps in Jaisalmer with transfers and desert experiences.",
+          amenityFeature: [
+            { "@type": "LocationFeatureSpecification", name: "Airport pickup" },
+            { "@type": "LocationFeatureSpecification", name: "Railway station transfer" },
+            { "@type": "LocationFeatureSpecification", name: "Desert safari" }
+          ]
+        }}
+      />
       <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <motion.div

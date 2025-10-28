@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/SectionHeader";
+import SEO from "@/components/SEO";
 import {
   MapPin,
   Zap,
@@ -213,6 +214,56 @@ function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; dela
 export default function Home() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Jaisalmer Taxi, Desert Safari, Sightseeing & Airport Pickup | Desert Tours"
+        description="Book Jaisalmer taxis, private cabs for desert safari, airport pickup, railway station transfers, local city tours, Khuri/Sam dunes camping, Tanot Mata one-way cabs, and tempo traveller for groups."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={"/assets/car3.jpg"}
+        canonical="https://jaisaltaxi.com/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Desert Tours Jaisalmer",
+          description:
+            "Taxi service, desert safari, sightseeing tours, airport and railway transfers in Jaisalmer.",
+          areaServed: "Jaisalmer, Rajasthan, India",
+          sameAs: [
+            "https://wa.me/919928600165"
+          ],
+          telephone: "+91 99286 00165",
+          image: "/assets/car3.jpg",
+          url: typeof window !== 'undefined' ? window.location.href : undefined,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Jaisalmer",
+            addressRegion: "Rajasthan",
+            addressCountry: "IN",
+          },
+          makesOffer: [
+            { "@type": "Offer", name: "Jaisalmer to Khuri taxi fare" },
+            { "@type": "Offer", name: "Private cab Jaisalmer desert safari" },
+            { "@type": "Offer", name: "Taxi from Jaisalmer railway station to hotel" },
+            { "@type": "Offer", name: "One way cab Jaisalmer to Tanot Mata Temple" },
+            { "@type": "Offer", name: "Group tempo traveller hire Jaisalmer" },
+            { "@type": "Offer", name: "Taxi for desert camping Khuri / Sam dunes" },
+            { "@type": "Offer", name: "Airport pick up taxi in Jaisalmer" },
+            { "@type": "Offer", name: "Jaisalmer sightseeing taxi for family trip" },
+            { "@type": "Offer", name: "Budget taxi for desert tour Jaisalmer" },
+            { "@type": "Offer", name: "Local sightseeing cab Jaisalmer city tour" }
+          ]
+        }}
+      />
       {/* Hero Section */}
       <section className="relative h-[78vh] md:h-[80vh] lg:h-[84vh] min-h-[520px] sm:min-h-[560px] flex items-center overflow-visible md:overflow-hidden">
         <div className="absolute inset-0">

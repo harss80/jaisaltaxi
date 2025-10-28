@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/SectionHeader";
+import SEO from "@/components/SEO";
 import {
   MapPin,
   Clock,
@@ -143,6 +144,43 @@ const taxiTestimonials = [
 export default function Services() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Taxi in Jaisalmer | Airport, Railway Station, Local & Outstation Cabs"
+        description="Hire taxi from Jaisalmer railway station to hotel, airport pick up taxi, local sightseeing cab, one-way cab to Tanot Mata, Sam/Khuri desert camping transfers, and tempo traveller for groups."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={"/assets/car5.jpg"}
+        canonical="https://jaisaltaxi.com/services"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Taxi Service in Jaisalmer",
+          areaServed: "Jaisalmer, Rajasthan, India",
+          provider: { "@type": "LocalBusiness", name: "Desert Tours Jaisalmer" },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Taxi Offers",
+            itemListElement: [
+              { "@type": "Offer", name: "Taxi from Jaisalmer railway station to hotel" },
+              { "@type": "Offer", name: "Airport pick up taxi in Jaisalmer" },
+              { "@type": "Offer", name: "Local sightseeing cab Jaisalmer city tour" },
+              { "@type": "Offer", name: "One way cab Jaisalmer to Tanot Mata Temple" },
+              { "@type": "Offer", name: "Taxi for desert camping Khuri / Sam dunes" },
+              { "@type": "Offer", name: "Group tempo traveller hire Jaisalmer" }
+            ]
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">

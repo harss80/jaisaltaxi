@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/SectionHeader";
+import SEO from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 import {
   MapPin,
@@ -99,6 +100,62 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Contact Desert Tours Jaisalmer | Taxi, Safari & Sightseeing Queries"
+        description="Call or WhatsApp for Jaisalmer taxi bookings: airport pickup, railway station to hotel transfers, local sightseeing taxi, desert safari private cab, Khuri/Sam camping, Tanot one-way cab, tempo traveller for groups."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage="/assets/car3.jpg"
+        canonical="https://jaisaltaxi.com/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is the best time to visit Jaisalmer?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "The best time to visit Jaisalmer is from October to March when the weather is pleasant and ideal for desert activities."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do I book a tour package?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "You can book a tour package by contacting us via phone, WhatsApp, or using our contact form. Our team will assist you with the booking process."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Do you provide customized tour packages?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, we offer customized tour packages tailored to your preferences, budget, and travel dates. Contact us to discuss your requirements."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What safety measures do you follow?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "We follow strict safety protocols for all our activities, maintain our vehicles regularly, and ensure all our staff is trained in safety procedures."
+              }
+            }
+          ]
+        }}
+      />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">

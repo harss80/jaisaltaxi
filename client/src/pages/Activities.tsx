@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const camelSafariImage = "/assets/camel1.jpg";
 const hotelImage = "/assets/hotel1.jpg";
@@ -11,6 +12,35 @@ const happyGuestsImage = "/assets/hotel3.jpg";
 export default function Activities() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Adventure Activities & Desert Safari | Private Cab Jaisalmer"
+        description="Book private cab for Jaisalmer desert safari, Khuri/Sam dunes camping, and city sightseeing. Airport and railway station taxi transfers available."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={"/assets/camel2.jpg"}
+        canonical="https://jaisaltaxi.com/activities"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Jaisalmer Desert Safari",
+          description: "Private cab + desert safari with options for Khuri/Sam dunes and camping.",
+          offers: {
+            "@type": "AggregateOffer",
+            availability: "https://schema.org/InStock",
+            priceCurrency: "INR",
+          }
+        }}
+      />
       <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <motion.div

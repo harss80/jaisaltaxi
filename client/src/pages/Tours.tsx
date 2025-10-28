@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/SectionHeader";
+import SEO from "@/components/SEO";
 import {
   Calendar,
   Users,
@@ -120,6 +121,34 @@ const tourPackages = [
 export default function Tours() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Jaisalmer Tour Packages | Hotel + Camp + Safari + Transfers"
+        description="Explore Jaisalmer with curated tour packages including hotel stays, desert camp, jeep/camel safari, Tanot border tour, and local sightseeing with private cabs."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={"/assets/camp2.jpg"}
+        canonical="https://jaisaltaxi.com/tours"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Jaisalmer Tour Packages",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Golden Jaisalmer" },
+            { "@type": "ListItem", position: 2, name: "Captivating Jaisalmer" },
+            { "@type": "ListItem", position: 3, name: "Majestic Jaisalmer" }
+          ]
+        }}
+      />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">

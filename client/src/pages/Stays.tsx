@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import { Phone, MessageCircle } from "lucide-react";
 
 const heroHotel = "/assets/hotel1.jpg";
@@ -33,6 +34,30 @@ function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; dela
 export default function Stays() {
   return (
     <div className="min-h-screen pt-16 md:pt-20">
+      <SEO
+        title="Stays in Jaisalmer | Hotels & Desert Camps with Taxi Transfers"
+        description="Book hotels and desert camps in Jaisalmer with airport pick up taxi, railway station to hotel cab, local sightseeing taxi, and desert tour transfers."
+        keywords={[
+          "Jaisalmer to Khuri taxi fare",
+          "Private cab Jaisalmer desert safari",
+          "Taxi from Jaisalmer railway station to hotel",
+          "One way cab Jaisalmer to Tanot Mata Temple",
+          "Group tempo traveller hire Jaisalmer",
+          "Taxi for desert camping Khuri / Sam dunes",
+          "Airport pick up taxi in Jaisalmer",
+          "Jaisalmer sightseeing taxi for family trip",
+          "Budget taxi for desert tour Jaisalmer",
+          "Local sightseeing cab Jaisalmer city tour",
+        ]}
+        ogImage={heroHotel}
+        canonical="https://jaisaltaxi.com/stays"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          name: "Desert Tours Jaisalmer — Stays",
+          description: "Stays and camps in Jaisalmer with taxi transfers and desert activities.",
+        }}
+      />
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
