@@ -90,7 +90,7 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/90 backdrop-blur-xl border-b border-border ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border backdrop-blur-xl bg-gradient-to-b from-card/90 to-background/80 ${
         isScrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
@@ -117,13 +117,16 @@ export function Navigation() {
               <Link key={link.href} href={link.href}>
                 <span
                   data-testid={`link-nav-${link.label.toLowerCase().replace(" ", "-")}`}
-                  className={`px-3.5 py-2 text-sm font-medium rounded-full transition-colors hover-elevate active-elevate-2 cursor-pointer inline-block ${
+                  className={`px-3.5 py-2 text-sm font-medium rounded-full transition-colors hover-elevate active-elevate-2 cursor-pointer inline-flex items-center gap-2 ${
                     location === link.href
-                      ? "text-primary bg-primary/10 border border-primary/20"
+                      ? "text-primary bg-primary/10 border border-primary/20 ring-1 ring-primary/20"
                       : "text-foreground hover:text-primary/90"
                   }`}
                 >
-                  {link.label}
+                  <span className={`shrink-0 w-7 h-7 rounded-full border ${
+                    location === link.href ? 'border-primary/40 bg-primary/10' : 'border-border bg-muted/40'
+                  } flex items-center justify-center`}>{getIcon(link.label)}</span>
+                  <span>{link.label}</span>
                 </span>
               </Link>
             ))}
@@ -147,7 +150,7 @@ export function Navigation() {
               variant="default"
               size="default"
               asChild
-              className={`rounded-full`}
+              className={`rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white`}
               data-testid="button-whatsapp-nav"
             >
               <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
@@ -170,6 +173,7 @@ export function Navigation() {
           </Button>
         </div>
       </div>
+      <div className="h-[2px] bg-gradient-to-r from-amber-400/70 via-primary/80 to-sky-400/70" />
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>

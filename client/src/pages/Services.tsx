@@ -219,7 +219,7 @@ export default function Services() {
           <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {[testimonial1, testimonial2, happyGuestsImage, taxiImage].map((src, i) => (
               <AnimatedCard key={i} delay={i * 0.05}>
-                <div className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-border bg-card">
+                <div className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-border bg-card transition-all duration-300">
                   <img src={src} alt="Taxi service gallery" className="w-full h-full object-cover aspect-square" loading="lazy" />
                 </div>
               </AnimatedCard>
@@ -294,10 +294,10 @@ export default function Services() {
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <Button variant="default" asChild className="px-6">
+                  <Button variant="default" asChild className="px-6 rounded-full">
                     <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                   </Button>
-                  <Button variant="outline" asChild className="px-6">
+                  <Button variant="outline" asChild className="px-6 rounded-full">
                     <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                   </Button>
                 </div>

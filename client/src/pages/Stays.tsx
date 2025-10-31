@@ -99,7 +99,7 @@ export default function Stays() {
           <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {[galleryHotel1, galleryHotel2, galleryHotel3, galleryHotel4].map((src, i) => (
               <AnimatedCard key={i} delay={i * 0.05}>
-                <div className="rounded-2xl overflow-hidden shadow-sm ring-1 ring-border bg-card">
+                <div className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-border bg-card transition-all duration-300">
                   <img src={src} alt="Stays gallery" className="w-full h-full object-cover aspect-square" loading="lazy" />
                 </div>
               </AnimatedCard>

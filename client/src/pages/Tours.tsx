@@ -173,8 +173,9 @@ export default function Tours() {
           <div className="space-y-16">
             {tourPackages.map((pkg, index) => (
               <AnimatedCard key={pkg.title} delay={index * 0.2}>
-                <Card className="overflow-hidden hover-elevate transition-shadow duration-300">
-                  <div className="grid lg:grid-cols-2 gap-0">
+                <div className="p-[1px] rounded-3xl bg-gradient-to-r from-primary/25 via-amber-400/20 to-transparent hover:via-amber-400/35 transition-colors">
+                  <Card className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:shadow-md hover-elevate transition-shadow duration-300">
+                    <div className="grid lg:grid-cols-2 gap-0">
                     <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden">
                       <img
                         src={pkg.image}
@@ -252,7 +253,7 @@ export default function Tours() {
                         <Button
                           size="lg"
                           variant="default"
-                          className="w-full"
+                          className="w-full rounded-full"
                           asChild
                           data-testid={`button-book-${pkg.title.toLowerCase().replace(" ", "-")}`}
                         >
@@ -263,8 +264,9 @@ export default function Tours() {
                         </Button>
                       </div>
                     </CardContent>
-                  </div>
-                </Card>
+                    </div>
+                  </Card>
+                </div>
               </AnimatedCard>
             ))}
           </div>

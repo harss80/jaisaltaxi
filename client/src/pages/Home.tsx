@@ -17,6 +17,8 @@ import {
   MessageCircle,
   Star,
   ArrowRight,
+  ShieldCheck,
+  Headphones,
 } from "lucide-react";
 
 const heroImage = "/assets/dance1.jpg";
@@ -36,6 +38,9 @@ const testimonial2 = "/assets/hotel12.jpg";
 const testimonial3 = "/assets/hotel13.jpg";
 const happyGuestsImage = "/assets/hotel8.jpg";
 const taxiFleetImage = "/assets/car3.jpg";
+const dunesImage = "/assets/camp3.jpg";
+const gadisarImage = "/assets/lake.jpg";
+const patwonImage = "/assets/hotel2.jpg";
 
 const services = [
   {
@@ -195,6 +200,20 @@ const testimonials = [
   },
 ];
 
+const destinations = [
+  { image: dunesImage, title: "Sam Sand Dunes", blurb: "Sunsets, camel rides & desert vibes.", href: "/activities" },
+  { image: gadisarImage, title: "Gadisar Lake", blurb: "Serene sunrise and boat rides.", href: "/tours" },
+  { image: fortImage, title: "Jaisalmer Fort", blurb: "Living fort with golden heritage.", href: "/tours" },
+  { image: patwonImage, title: "Patwon Ki Haveli", blurb: "Intricate havelis and art.", href: "/tours" },
+];
+
+const whyUs = [
+  { icon: ShieldCheck, title: "Trusted & Safe", desc: "Professional drivers and verified experiences." },
+  { icon: Zap, title: "Fast Support", desc: "Quick help over call or WhatsApp when you need it." },
+  { icon: Headphones, title: "Guided Trips", desc: "Local insights with optional guides in EN/HI." },
+  { icon: Star, title: "Happy Travellers", desc: "Highly rated service loved by guests." },
+];
+
 function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -265,12 +284,28 @@ export default function Home() {
         }}
       />
       {/* Hero Section */}
-      <section className="relative h-[78vh] md:h-[80vh] lg:h-[84vh] min-h-[520px] sm:min-h-[560px] flex items-center overflow-visible md:overflow-hidden">
+      <section className="relative h-[78vh] md:h-[80vh] lg:h-[84vh] min-h-[520px] sm:min-h-[560px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Jaisalmer Fort" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 md:from-black/35 lg:from-black/25 via-black/10 to-transparent" />
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-12 sm:h-16 md:h-24 bg-gradient-to-b from-transparent to-background" />
+
+        {/* Animated gradient blobs */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.6, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="pointer-events-none absolute -top-16 -left-16 w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-amber-400/30 via-orange-500/20 to-pink-500/20 blur-3xl"
+          aria-hidden
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.5, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.35 }}
+          className="pointer-events-none absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-sky-400/30 via-cyan-500/20 to-emerald-500/20 blur-3xl"
+          aria-hidden
+        />
 
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-0 md:pt-2 pb-8 md:pb-0">
@@ -350,8 +385,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Destinations Section */}
+      <section id="destinations" className="py-16 md:py-20 lg:py-32 bg-background relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <SectionHeader
+            label="TOP DESTINATIONS"
+            title="Must‑visit places in and around Jaisalmer"
+          />
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {destinations.map((d, index) => (
+              <AnimatedCard key={d.title} delay={index * 0.08}>
+                <Link href={d.href}>
+                  <div className="group relative overflow-hidden rounded-3xl border border-border bg-card hover:-translate-y-2 transition-transform duration-300 cursor-pointer shadow-sm hover:shadow-md">
+                    <div className="relative aspect-[4/3]">
+                      <img src={d.image} alt={d.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    </div>
+                    <div className="absolute left-4 right-4 bottom-4">
+                      <div className="rounded-xl bg-card/95 backdrop-blur-md border border-border p-4 flex items-center justify-between gap-4 shadow-sm">
+                        <div>
+                          <h3 className="text-base md:text-lg font-semibold text-foreground">{d.title}</h3>
+                          <p className="text-xs text-muted-foreground mt-0.5">{d.blurb}</p>
+                        </div>
+                        <span className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-border text-foreground group-hover:bg-muted transition-colors">
+                          <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </AnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-20 lg:py-32 bg-background">
+      <section id="services" className="py-16 md:py-20 lg:py-32 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <SectionHeader
             label="KHAMA GHANI"
@@ -362,7 +432,7 @@ export default function Home() {
               <AnimatedCard key={service.title} delay={index * 0.1}>
                 <Link href={service.href}>
                   <div data-testid={`card-service-${service.title.toLowerCase().replace(" ", "-")}`}>
-                    <div className="group relative overflow-hidden rounded-3xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                    <div className="group relative overflow-hidden rounded-3xl border border-border bg-card hover:-translate-y-2 transition-transform duration-300 cursor-pointer shadow-sm hover:shadow-md">
                       <div className="relative aspect-[4/5]">
                         <img
                           src={service.image}
@@ -373,7 +443,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       </div>
                       <div className="absolute left-4 right-4 bottom-4 md:left-5 md:right-5 md:bottom-5">
-                        <div className="bg-card/95 backdrop-blur-md border border-border rounded-2xl p-4 md:p-5 flex items-center justify-between gap-4">
+                        <div className="bg-card/95 backdrop-blur-md border border-border rounded-2xl p-4 md:p-5 flex items-center justify-between gap-4 shadow-sm">
                           <div>
                             <h3 className="text-lg md:text-xl font-semibold text-foreground">{service.title}</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed mt-1 hidden sm:block">
@@ -408,7 +478,8 @@ export default function Home() {
               <AnimatedCard key={activity.title} delay={index * 0.1}>
                 <Link href={activity.href}>
                   <div data-testid={`card-activity-${activity.title.toLowerCase().replace(" ", "-")}`}>
-                    <Card className="relative overflow-hidden rounded-2xl border border-border bg-card/95 hover-elevate active-elevate-2 transition-all duration-300 hover:-translate-y-2 cursor-pointer group h-full flex flex-col">
+                    <div className="p-[1px] rounded-3xl bg-gradient-to-r from-primary/25 via-amber-400/20 to-transparent hover:via-amber-400/35 transition-colors h-full">
+                      <Card className="relative overflow-hidden rounded-3xl border border-border bg-card/95 hover-elevate active-elevate-2 transition-all duration-300 hover:-translate-y-2 cursor-pointer group h-full flex flex-col shadow-sm hover:shadow-md">
                       <div className="relative aspect-[16/10] rounded-t-2xl overflow-hidden">
                         <img
                           src={activity.image}
@@ -425,14 +496,15 @@ export default function Home() {
                           Learn more <ArrowRight className="w-4 h-4" />
                         </span>
                       </CardContent>
-                    </Card>
+                      </Card>
+                    </div>
                   </div>
                 </Link>
               </AnimatedCard>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button variant="default" size="lg" asChild data-testid="button-view-activities">
+            <Button variant="default" size="lg" asChild data-testid="button-view-activities" className="rounded-full px-6">
               <Link href="/activities">
                 <a>View More Activities</a>
               </Link>
@@ -442,7 +514,7 @@ export default function Home() {
       </section>
 
       {/* Sightseeing Tours Section */}
-      <section id="sightseeing" className="relative overflow-hidden py-16 md:py-20 lg:py-32 bg-background">
+      <section id="sightseeing" className="relative overflow-hidden py-16 md:py-20 lg:py-32 bg-background bg-sightseeing">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <SectionHeader
             label="POPULAR SIGHTSEEING TOURS"
@@ -451,8 +523,9 @@ export default function Home() {
           <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {sightseeingTours.map((tour, index) => (
               <AnimatedCard key={tour.title} delay={index * 0.1}>
-                <Link href="/services">
-                  <Card className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm hover:shadow-md hover-elevate active-elevate-2 transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+                <Link href="/tours">
+                  <div className="p-[1px] rounded-3xl bg-gradient-to-r from-primary/25 via-amber-400/20 to-transparent hover:via-amber-400/35 transition-colors">
+                    <Card className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:shadow-md hover-elevate active-elevate-2 transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={tour.image}
@@ -466,7 +539,8 @@ export default function Home() {
                       <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{tour.description}</p>
                       <div className="w-10 h-[2px] bg-primary/60 rounded mt-2" />
                     </CardContent>
-                  </Card>
+                    </Card>
+                  </div>
                 </Link>
               </AnimatedCard>
             ))}
@@ -475,8 +549,8 @@ export default function Home() {
             Dive into the wonders of Jaisalmer, the enchanting golden city of India.
           </p>
           <div className="mt-6 text-center">
-            <Button variant="default" size="lg" asChild data-testid="button-view-tours">
-              <Link href="/services">
+            <Button variant="default" size="lg" asChild data-testid="button-view-tours" className="rounded-full px-6">
+              <Link href="/tours">
                 <a>View More Sightseeing Tours</a>
               </Link>
             </Button>
@@ -582,7 +656,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button variant="default" size="lg" asChild data-testid="button-view-packages">
+            <Button variant="default" size="lg" asChild data-testid="button-view-packages" className="rounded-full px-6">
               <Link href="/tours">
                 <a>View More Tour Packages</a>
               </Link>
@@ -631,7 +705,7 @@ export default function Home() {
       </section>
 
       {/* Trusted Taxi Service Section */}
-      <section id="trusted-taxi" className="py-16 md:py-20 lg:py-28 bg-background">
+      <section id="trusted-taxi" className="py-16 md:py-20 lg:py-28 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <SectionHeader
             label="TRUSTED TAXI SERVICE"
@@ -670,6 +744,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section id="why-us" className="py-16 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <SectionHeader
+            label="WHY CHOOSE US"
+            title="Travel with confidence and comfort"
+          />
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {whyUs.map((w, index) => (
+              <AnimatedCard key={w.title} delay={index * 0.08}>
+                <div className="rounded-2xl border border-border bg-card p-6 hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-md hover:bg-accent/30 hover:border-primary/30">
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-11 h-11 rounded-xl bg-amber-100/60 dark:bg-amber-400/10 border border-border flex items-center justify-center text-amber-600">
+                      <w.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">{w.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{w.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="py-16 md:py-20 lg:py-32 bg-card">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
@@ -680,7 +781,7 @@ export default function Home() {
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <AnimatedCard key={testimonial.name} delay={index * 0.1}>
-                <Card className="h-full">
+                <Card className="h-full rounded-2xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6 md:p-8 space-y-4">
                     <p className="text-base text-muted-foreground leading-relaxed italic">
                       "{testimonial.text}"
@@ -748,7 +849,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="default" size="lg" asChild data-testid="button-learn-more">
+                <Button variant="default" size="lg" asChild data-testid="button-learn-more" className="rounded-full px-6">
                   <Link href="/about">
                     <a>Learn More About Us</a>
                   </Link>
