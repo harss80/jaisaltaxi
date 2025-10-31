@@ -107,11 +107,11 @@ export default function About() {
           url: typeof window !== 'undefined' ? window.location.href : undefined,
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+91 99286 00165",
+            telephone: "+91 97992 95226",
             contactType: "customer service",
             areaServed: "IN",
           },
-          sameAs: ["https://wa.me/919928600165"]
+          sameAs: ["https://wa.me/919799295226"]
         }}
       />
       {/* Hero Section */}
@@ -385,7 +385,7 @@ export default function About() {
               asChild
               data-testid="button-about-call"
             >
-              <a href="tel:+919928600165">
+              <a href="tel:+919799295226">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
@@ -396,7 +396,7 @@ export default function About() {
               asChild
               data-testid="button-about-whatsapp"
             >
-              <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp
               </a>

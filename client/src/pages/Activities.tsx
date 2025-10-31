@@ -153,10 +153,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -198,10 +198,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -272,10 +272,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -316,10 +316,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -374,10 +374,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>
@@ -433,10 +433,10 @@ export default function Activities() {
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <Button variant="default" asChild className="px-6">
-                  <a href="tel:+919928600165"><Phone className="w-4 h-4 mr-2" /> Call 99286 00165</a>
+                  <a href="tel:+919799295226"><Phone className="w-4 h-4 mr-2" /> Call 97992 95226</a>
                 </Button>
                 <Button variant="outline" asChild className="px-6">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp</a>
                 </Button>
               </div>
             </div>

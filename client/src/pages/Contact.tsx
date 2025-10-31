@@ -32,14 +32,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 99286 00165"],
-    action: "tel:+919928600165",
+    details: ["+91 97992 95226"],
+    action: "tel:+919799295226",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    details: ["+91 99286 00165"],
-    action: "https://wa.me/919928600165",
+    details: ["+91 97992 95226"],
+    action: "https://wa.me/919799295226",
   },
   {
     icon: Mail,
@@ -379,9 +379,9 @@ export default function Contact() {
                         asChild
                         data-testid="button-contact-call"
                       >
-                        <a href="tel:+919928600165">
+                        <a href="tel:+919799295226">
                           <Phone className="w-5 h-5 mr-2" />
-                          Call +91 99286 00165
+                          Call +91 97992 95226
                         </a>
                       </Button>
                       <Button
@@ -391,7 +391,7 @@ export default function Contact() {
                         asChild
                         data-testid="button-contact-whatsapp"
                       >
-                        <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-5 h-5 mr-2" />
                           Chat on WhatsApp
                         </a>

@@ -239,9 +239,9 @@ export default function Home() {
             "Taxi service, desert safari, sightseeing tours, airport and railway transfers in Jaisalmer.",
           areaServed: "Jaisalmer, Rajasthan, India",
           sameAs: [
-            "https://wa.me/919928600165"
+            "https://wa.me/919799295226"
           ],
-          telephone: "+91 99286 00165",
+          telephone: "+91 97992 95226",
           image: "/assets/car3.jpg",
           url: typeof window !== 'undefined' ? window.location.href : undefined,
           address: {
@@ -315,7 +315,7 @@ export default function Home() {
                   className="bg-primary hover:bg-primary/90 text-sm md:text-lg px-6 rounded-full shadow-lg shadow-black/10"
                   data-testid="button-hero-whatsapp"
                 >
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     WhatsApp
                   </a>
@@ -327,7 +327,7 @@ export default function Home() {
                   className="border-white/60 text-white hover:bg-white/10 text-sm md:text-lg px-6 rounded-full"
                   data-testid="button-hero-plan"
                 >
-                  <a href="tel:+919928600165">
+                  <a href="tel:+919799295226">
                     <Phone className="w-5 h-5 mr-2" />
                     Plan Your Trip
                   </a>
@@ -497,12 +497,12 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
                 <Button asChild variant="outline" className="rounded-full px-6 border-white/50 text-white hover:bg-white/10">
-                  <a href="tel:+919928600165">
-                    <Phone className="w-5 h-5 mr-2" /> Call 99286 00165
+                  <a href="tel:+919799295226">
+                    <Phone className="w-5 h-5 mr-2" /> Call 97992 95226
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="rounded-full px-6 bg-white text-slate-900 hover:bg-white/90 border-transparent">
-                  <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5 mr-2" /> Chat on WhatsApp
                   </a>
                 </Button>

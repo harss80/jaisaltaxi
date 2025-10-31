@@ -138,7 +138,7 @@ export function Navigation() {
               className={`rounded-full`}
               data-testid="button-call-nav"
             >
-              <a href="tel:+919928600165">
+              <a href="tel:+919799295226">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>
@@ -150,7 +150,7 @@ export function Navigation() {
               className={`rounded-full`}
               data-testid="button-whatsapp-nav"
             >
-              <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
               </a>
@@ -226,13 +226,13 @@ export function Navigation() {
                 <div className="sticky bottom-0 left-0 right-0 border-t bg-white/95 dark:bg-slate-950/95 backdrop-blur px-6 py-4 md:px-8">
                   <div className="grid grid-cols-2 gap-3">
                     <Button variant="outline" size="default" className="w-full rounded-xl py-5 text-base" asChild>
-                      <a href="tel:+919928600165" className="flex items-center justify-center gap-2">
+                      <a href="tel:+919799295226" className="flex items-center justify-center gap-2">
                         <Phone className="w-5 h-5" />
                         Call
                       </a>
                     </Button>
                     <Button variant="default" size="default" className="w-full rounded-xl py-5 text-base" asChild>
-                      <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                         <MessageCircle className="w-5 h-5" />
                         WhatsApp
                       </a>

@@ -256,7 +256,7 @@ export default function Tours() {
                           asChild
                           data-testid={`button-book-${pkg.title.toLowerCase().replace(" ", "-")}`}
                         >
-                          <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+                          <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                             <MessageCircle className="w-5 h-5 mr-2" />
                             Book This Package
                           </a>
@@ -285,7 +285,7 @@ export default function Tours() {
               asChild
               data-testid="button-tours-call"
             >
-              <a href="tel:+919928600165">
+              <a href="tel:+919799295226">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
@@ -296,7 +296,7 @@ export default function Tours() {
               asChild
               data-testid="button-tours-whatsapp"
             >
-              <a href="https://wa.me/919928600165" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919799295226" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp
               </a>
